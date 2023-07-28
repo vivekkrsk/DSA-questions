@@ -71,11 +71,11 @@ int main() {
         for(int i=0; i<n; i++){
             for(int j=0; j<n; j++){
                 for(int k=0; k<n; k++){
-                    int l=(v[i]*v[j])+k;
+                    int l=(v[i]*v[j])+v[k];
                     lhs.push_back(l);
                     
                     if(v[i]!=0){
-                        int r=(v[i]*v[j])+k;
+                        int r=v[i]*(v[j]+v[k]);
                         rhs.push_back(r);
                     }
                 }
